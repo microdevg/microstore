@@ -5,137 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
-
-    
     <title>Document</title>
 </head>
 <body>
 
-
-
-
-    <div class=" container">
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container-fluid">
-         <img src="./img/micro-store.png" height="60px" alt="">
-          <a class="navbar-brand" href="#">           
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             
-          
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Arduino
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Arduino UNO</a></li>
-                    
-                      <li><a class="dropdown-item" href="#">Arduino MEGA</a></li>
-    
-                      <li><a class="dropdown-item" href="#">Displays</a></li>
-    
-                      <li><a class="dropdown-item" href="#">Sensores</a></li>
-                    </ul>
+            <img src="./img/micro-store.png" height="60px" alt="">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Menús desplegables -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Arduino
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Arduino UNO</a></li>
+                            <li><a class="dropdown-item" href="#">Arduino MEGA</a></li>
+                            <li><a class="dropdown-item" href="#">Displays</a></li>
+                            <li><a class="dropdown-item" href="#">Sensores</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Placas de desarrollo
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <li><a class="dropdown-item" href="#">ESP32</a></li>
+                     <li><a class="dropdown-item" href="#">STM32</a></li>
+                     <li><hr class="dropdown-divider">Microchip</li>
+                     <li><a class="dropdown-item" href="#">Linux embebido</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
                   </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Placas de desarrollo
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">ESP32</a></li>
-                  <li><a class="dropdown-item" href="#">STM32</a></li>
-                  <li><hr class="dropdown-divider">Microchip</li>
-                  <li><a class="dropdown-item" href="#">Linux embebido</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Manuales</a>
+                  </li>
                 </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Modulos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><hr class="dropdown-divider">Modulos de potencia</li>
-                  <li><a class="dropdown-item" href="#">Fuentes Switch</a></li>
-                  <li><a class="dropdown-item" href="#">Diodos</a></li>
-
-
-                  <li><hr class="dropdown-divider">Modulos de comunicacion</li>
-                  <li><a class="dropdown-item" href="#">Modulos 3G/4G</a></li>
-
-                  <li><a class="dropdown-item" href="#">LoraWan</a></li>
-
-                  <li><a class="dropdown-item" href="#">Satelital</a></li>
+                     
+                    <!-- Puedes añadir más aquí -->
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Manuales</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary " type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="./img/products/arduino.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="./img/products/esp32.jpg" class="d-block w-100 " alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="./img/products/raspberry_pico.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        <footer>
-    
-            Footer
-    
-        </footer>
+    </nav>
 
+    <!-- Row con 4 columnas para tarjetas -->
+    <div class="row mb-4 g-3">
+        <div class="col-md-3">
+            <div class="card">
+                <img src="./img/products/arduino.jpg" class="card-img-top" alt="Arduino">
+                <div class="card-body">
+                    <h5 class="card-title">Arduino </h5>
+                    <p class="card-text"> Proyectos geniales al alcance de todos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="./img/products/esp32.jpg" class="card-img-top" alt="ESP32">
+                <div class="card-body">
+                    <h5 class="card-title">ESP32</h5>
+                    <p class="card-text">La placa de desarrollo que revoluciono los proyectos IoT.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="./img/products/raspberry_pico.jpg" class="card-img-top" alt="Raspberry Pico">
+                <div class="card-body">
+                    <h5 class="card-title">Raspberry Pico</h5>
+                    <p class="card-text">El RP2040, el primer microcontrolador  desarrollado por Rapsberry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="./img/products/modulo-com.jpg" class="card-img-top" alt="Module">
+                <div class="card-body">
+                    <h5 class="card-title">Módulo de Comunicación</h5>
+                    <p class="card-text">Lleva tus aplicaciones del IoT al siguiente nivel</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-   
+    <!-- Carrusel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./img/products/arduino.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Desarrolla tus proyectos con Arduino</h5>
+                    <p>Arduino es la plataforma de desarrollo de prototipos mas usada del planeta.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./img/products/esp32.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Esp32</h5>
+                    <p>WiFi y Bluetooth al alcance de todos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/products/raspberry_pico.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Raspberry Pi Pico</h5>
+                    <p>La primera placa de desarrollo basada en el RP2040.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>© 2024 Micro Store. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
