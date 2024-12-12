@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito',sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color:aliceblue;
+    min-width: 320px;    
+}
+
+
+header{
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 20px 2px;
+    background-color: rgb(71, 149, 204);
+}
+
+header .logo{
+    cursor: pointer;
+}
+
+header .logo img:hover{
+    transform: scale(1.05);
+}
+header .logo img {
+    height: 70px;
+    width: auto;
+    border-radius: 5px;
+    transform: all 0.3s;
+    border: 1px solid #131415;
+}
+
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.nav-links{
+    display: inline-block;
+    padding: 0 15px;
+    transition: all 0.3s;
+}
+
+.nav-links:hover{
+    transform:scale(1.05);
+}
+.nav-links a:hover{
+    color:rgb(217, 230, 230);
+}
+
+.nav-links a {
+    font-weight: 700;
+    color:#eceff1;
+    text-decoration: none;
+}
+.nav-links.contact a {
+    color:#131415;
+}
+.nav-links.contact{
+    font-weight: 700;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    padding: auto;-left: 20px;
+
+
+    transition: all 0.3s;
+    
+}
+.btn-contact:hover{
+    background-color: aliceblue;
+    background-color: rgba(71, 149, 204, 0.5);
+    transform: scale(1.05);
+}
+
+aside{
+    background-color: antiquewhite;
+    margin: 20px;
+}
+.nav-search{
+    background-color: gray;
+    margin: 20px;
+}
+
+.filters{
+    background-color: #eceff1;
+    margin: 20px;
+}
+
+.grid-content{
+    background-color: brown;
+    margin: 20px;
+}
+
+footer{
+background-color: blue;    
+}
