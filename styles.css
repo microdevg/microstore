@@ -48,3 +48,25 @@ body{
         flex-direction: column;
         justify-content: space-between; /* Espaciado entre título, texto y botón */
     }
+
+
+    .carousel-item {
+        
+
+    }
+
+    .carousel-item img{
+        opacity: 0.7;
+    }
+
+    .carousel-caption{
+        opacity: 0.7;
+        transition: all 0.3s ease;
+        color: white;
+        background-color: #46aaf511;
+    }
+
+    .carousel-caption:hover{
+        opacity: 1;
+        color: black;
+    }
