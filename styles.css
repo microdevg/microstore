@@ -17,6 +17,11 @@ body{
 
 }
 
+
+nav{
+    z-index: 1200;
+}
+
 .card{
     padding-bottom: 2px;
     z-index: 1000;
@@ -50,18 +55,15 @@ body{
     }
 
 
-    .carousel-item {
-        
-
-    }
+  
 
     .carousel-item img{
-        opacity: 0.7;
+        opacity: 0.6;
     }
 
     .carousel-caption{
-        opacity: 0.7;
-        transition: all 0.3s ease;
+        opacity: 0.8;
+        transition: all 0.2s ease;
         color: white;
         background-color: #46aaf511;
     }
