@@ -23,10 +23,6 @@ nav{
 }
 
 
-.filter{
-    position: sticky;
-    top:20px
-}
 
 .card{
     padding-bottom: 2px;
@@ -79,11 +75,16 @@ nav{
         color: black;
     }
 
-    @media (max-width:640px) {
-        
-        .filter{
-            height: 100%;
-            position: fixed;
-            top:20px
-        }
-    }
+
+
+
+.main-content{
+    position:sticky;
+    top: 100px;
+}
+
+
+.filter{
+    position: sticky;
+    top:120px;
+}
