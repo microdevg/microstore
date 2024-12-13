@@ -22,6 +22,12 @@ nav{
     z-index: 1200;
 }
 
+
+.filter{
+    position: sticky;
+    top:20px
+}
+
 .card{
     padding-bottom: 2px;
     z-index: 1000;
@@ -71,4 +77,13 @@ nav{
     .carousel-caption:hover{
         opacity: 1;
         color: black;
+    }
+
+    @media (max-width:640px) {
+        
+        .filter{
+            height: 100%;
+            position: fixed;
+            top:20px
+        }
     }

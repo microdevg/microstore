@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 " >
+        <div class="container-fluid">
+            <img src="./img/micro-store.png" height="60px" alt="">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Menús desplegables -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Arduino
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./arduino.html">Arduino UNO</a></li>
+                            <li><a class="dropdown-item" href="#">Arduino MEGA</a></li>
+                            <li><a class="dropdown-item" href="#">Displays</a></li>
+                            <li><a class="dropdown-item" href="#">Sensores</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Placas de desarrollo
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <li><a class="dropdown-item" href="#">ESP32</a></li>
+                     <li><a class="dropdown-item" href="#">STM32</a></li>
+                     <li><hr class="dropdown-divider">Microchip</li>
+                     <li><a class="dropdown-item" href="#">Linux embebido</a></li>
+                   </ul>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Manuales</a>
+                  </li>
+                </ul>
+                     
+                    <!-- Puedes añadir más aquí -->
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary " type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+   
+<div class="row mb-4 g-3 ">
+        <!-- Columna izquierda: Filtros -->
+    <div class="   col-md-4 col-lg-3 ">
+          <div class="p-3 border bg-light position-sticky filter">
+            <h5 class="mb-3">Filtros de Búsqueda</h5>
+            <form>
+              <!-- Filtro por Categoría -->
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoría</label>
+                <select id="categoria" class="form-select">
+                  <option selected>Todas</option>
+                  <option value="1">Electrónica</option>
+                  <option value="2">Hogar</option>
+                  <option value="3">Ropa</option>
+                </select>
+              </div>
+              
+              <!-- Filtro por Precio -->
+              <div class="mb-3">
+                <label for="precio" class="form-label">Rango de Precio</label>
+                <input type="range" class="form-range" id="precio" min="0" max="500">
+                <div class="d-flex justify-content-between">
+                  <span>$0</span>
+                  <span>$500</span>
+                </div>
+              </div>
+  
+              <!-- Botón de Aplicar Filtros -->
+              <button type="submit" class="btn btn-primary w-100">Aplicar Filtros</button>
+            </form>
+          </div>
+  </div>
+
+  <div class="  col-md-8 col-lg-9">
+    <div class="row g-0">
+        <div class="card mb-4">
+            <div class="row g-0">
+            <div class="col-md-4 h-10 d-flex justify-content-center align-items-center" >
+                <img src="./img/products/arduino.jpg" class="img-fluid h-100  " alt="Producto 1">
+            </div>
+            <div class="col-md-8 g-3">
+                <div class="card-body">
+                <h5 class="card-title">Arduino UNO R3</h5>
+                <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
+                <span  class="d-none d-md-block">
+                    Tiene 20 pines digitales de entrada/salida 
+                    (de las cuales 6 se puede utilizar como salidas PWM)
+                </span>
+                </p>
+                <p class="text-primary fw-bold">$100</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="card mb-4">
+            <div class="row g-0">
+            <div class="col-md-4 h-10 d-flex justify-content-center align-items-center" >
+                <img src="./img/products/arduino_mega.png" class="img-fluid h-100  " alt="Producto 1">
+            </div>
+            <div class="col-md-8 g-3">
+                <div class="card-body">
+                <h5 class="card-title">Arduino MEGA R3</h5>
+                <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
+                <span  class="d-none d-md-block">
+                    Tiene 20 pines digitales de entrada/salida 
+                    (de las cuales 6 se puede utilizar como salidas PWM)
+                </span>
+                </p>
+                <p class="text-primary fw-bold">$100</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="card mb-4">
+            <div class="row g-0">
+            <div class="col-md-4 h-10 d-flex justify-content-center align-items-center" >
+                <img src="./img/products/Arduino-Due-Board.jpg" class="img-fluid h-100  " alt="Producto 1">
+            </div>
+            <div class="col-md-8 g-3">
+                <div class="card-body">
+                <h5 class="card-title">Arduino DUE</h5>
+                <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
+                <span  class="d-none d-md-block">
+                    Tiene 20 pines digitales de entrada/salida 
+                    (de las cuales 6 se puede utilizar como salidas PWM)
+                </span>
+                </p>
+                <p class="text-primary fw-bold">$100</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="card mb-4">
+            <div class="row g-0">
+            <div class="col-md-4 h-10 d-flex justify-content-center align-items-center" >
+                <img src="./img/products/arduino_nano.png" class="img-fluid h-100  " alt="Producto 1">
+            </div>
+            <div class="col-md-8 g-3">
+                <div class="card-body">
+                <h5 class="card-title">Arduino Nano v3</h5>
+                <p class="card-text">El Arduino Nano es una placa basada en el ATmega328 de tamaño compacto.
+                <span  class="d-none d-md-block">
+                    Tiene 20 pines digitales de entrada/salida 
+                    (de las cuales 6 se puede utilizar como salidas PWM)
+                </span>
+                </p>
+                <p class="text-primary fw-bold">$100</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+        
+        
+       
+      
+        <div class="card mb-4">
+            <div class="row g-0">
+            <div class="col-md-4">
+                <img src="./img/products/arduino_portenta.jpg" class="img-fluid h-100" alt="Producto 1">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title">Arduino Portenta H7</h5>
+                <p class="card-text">Portenta H7 te permite construir tu próximo proyecto inteligente. 
+                    <span  class="d-none d-md-block">
+                        ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente? 
+                        Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
+                    </span>
+                <p class="text-primary fw-bold">$100</p>
+                </div>
+            </div>
+            </div>
+        </div> 
+       
+
+
+    </div>
+          
+
+            
+</div>
+</div>
+    
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>© 2024 Micro Store. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
