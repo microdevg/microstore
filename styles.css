@@ -90,3 +90,58 @@ nav{
     position: sticky;
     top:0px;
 }
+
+.img-fluid {
+    opacity: 1;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    padding: 5%;
+}
+
+.img-fluid:hover{
+
+    opacity: 1;
+    transform: scale(1.1);
+    margin:  1%;
+}
+
+
+
+/* Para pantallas extra pequeñas (xs) */
+@media (max-width: 575.98px) {
+    .img-fluid:hover{
+        height: 50%;
+        opacity: 1;
+        transform: scale(1.02);
+    }
+ 
+.img-fluid:hover{
+    height: 50%;
+    opacity: 1;
+    transform: scale(1.02);
+}
+  }
+  
+  /* Para pantallas pequeñas (sm y menores) */
+  @media (max-width: 767.98px) {
+    .img-fluid:hover{
+        height: 50%;
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    .index-card{
+        background-color: red;
+        margin: 2%;
+        height: 20%;
+        opacity: 0.1;
+        transform: scale(1.02);
+    }
+ 
+.img-fluid:hover{
+    height: 50%;
+    opacity: 1;
+    transform: scale(1.02);
+}
+  }
+  
