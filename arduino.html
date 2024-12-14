@@ -26,17 +26,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!-- Menús desplegables -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Arduino
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./arduino.html">Arduino UNO</a></li>
-                                <li><a class="dropdown-item" href="#">Arduino MEGA</a></li>
-                                <li><a class="dropdown-item" href="#">Displays</a></li>
-                                <li><a class="dropdown-item" href="#">Sensores</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./arduino.html">Arduino</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -55,9 +46,7 @@
                         <li class="nav-item">
                             <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Manuales</a>
-                        </li>
+                
                     </ul>
 
                     <!-- Puedes añadir más aquí -->
@@ -73,24 +62,25 @@
     </div>
       
 
-    <div class="container mt-5  ">
+  
 
-
-        <div class="row mb-4 g-3  ">
+    <div class="container mt-2  ">
+        
+     
+        <div class="row  g-3 mb-4 mt-5  ">
             <!-- Columna izquierda: Filtros -->
-            <div class="   col-md-4 col-lg-3 ">
+            <div class="   col-md-12 col-lg-3 sticky-top  sticky-lg-top">
                 <div class="p-3  mt-5 border bg-light  filter ">
-                    <h5 class="mb-3">Filtros de Búsqueda</h5>
                     <form>
                         <!-- Filtro por Categoría -->
 
                         <div class="row mb-2">
                             <div class="col-5 col-sm-6 col-md-12 col-lg-12 mb-3">
-                                <label for="categoria" class="form-label">Categoría</label>
+                                <label for="categoria" class="form-label">Filtros</label>
                             </div>
                             <div class="col-7 col-sm-6 col-md-12 col-lg-12 mb-3">
                                 <select id="categoria" class="form-select">
-                                    <option selected>Todas</option>
+                                    <option selected>Categorias</option>
                                     <option value="1">Electrónica</option>
                                     <option value="2">Hogar</option>
                                     <option value="3">Ropa</option>
@@ -100,17 +90,17 @@
 
 
 
-                        <div class="row  ">
+                        <div class="row  mt-0 ">
                             <!-- Filtro por Precio -->
-                            <div class="col-12 col-sm-12 col-lg-12 mb-3">
-                                <label for="precio" class="form-label">Rango de Precio</label>
-                                <input type="range" class="form-range" id="precio" min="0" max="500">
+                            <div class="col-5 col-sm-12 col-lg-12 mb-3">
+                                <label for="precio" class="d-none form-label">Rango de Precio</label>
+                                <input type="range" class="form-range pt-4" id="precio" min="0" max="500">
                                 <div class="d-flex justify-content-between">
                                     <span>$0</span>
                                     <span>$500</span>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-12 col-lg-12 ">
+                            <div class="pt-2 col-7  col-sm-12 col-lg-12 ">
                                 <!-- Botón de Aplicar Filtros -->
                                 <button type="submit" class=" btn btn-primary w-100 ">Aplicar Filtros</button>
 
@@ -123,9 +113,9 @@
                 </div>
             </div>
 
-            <div class="  col-md-8 col-lg-9 main-content">
-                <div class="main-content mt-2 mt-lg-5">
-                    <div class=" row g-0 ">
+            <div class="  col-md-12 col-lg-9 ">
+                <div class=" mt-2 mt-lg-5 ">
+                    <div class=" row g-0 main-content">
                         <div class="card mb-4">
                             <div class="row g-0">
                                 <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
