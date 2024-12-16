@@ -67,6 +67,9 @@
 
     <div class="container mt-2  ">
         
+ 
+
+
         <div class="row  g-3  mt-2  ">
             <!-- Columna izquierda: Filtros -->
             <div class="   col-md-12 col-lg-3 sticky-top  sticky-lg-top">
@@ -74,25 +77,34 @@
                     <form>
                       
 
-                        <div class="row  mt-0 ">
-                            <!-- Filtro por Precio -->
-                            <div class="col-5 col-sm-5 col-md-5 col-lg-12 ">
-                                <label for="precio" class="d-none form-label">Rango de Precio</label>
-                                <input type="range" class="form-range pt-4" id="precio" min="0" max="500">
-                                <div class="d-flex justify-content-between">
-                                    <span>$0</span>
-                                    <span>$500</span>
+                        <div class="row">
+                            <!-- Botón para colapsar/expandir -->
+                            <button class="btn btn-primary m-0 p-0 button-filter" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleCard" aria-expanded="false" aria-controls="collapsibleCard">
+                            Filtros
+                            </button>
+                           
+                             <!-- Tarjeta -->
+                             <div class="card">
+                              
+                               <div id="collapsibleCard" class="collapse show">
+                                <div class="row  mt-0 ">
+                                    <!-- Filtro por Precio -->
+                                    <div class="col-5 col-sm-5 col-md-5 col-lg-12 ">
+                                        <label for="precio" class="d-none form-label">Rango de Precio</label>
+                                        <input type="range" class="form-range pt-4" id="precio" min="0" max="500">
+                                        <div class="d-flex justify-content-between">
+                                            <span>$0</span>
+                                            <span>$500</span>
+                                        </div>
+                                    </div>
+                                    <div class="pt-2 col-7  col-sm-7 col-md-7 col-lg-12  ">
+                                        <!-- Botón de Aplicar Filtros -->
+                                        <button type="submit" class=" btn btn-primary w-100   ">Precio</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pt-2 col-7  col-sm-7 col-md-7 col-lg-12  ">
-                                <!-- Botón de Aplicar Filtros -->
-                                <button type="submit" class=" btn btn-primary w-100   ">Filtrar por precio</button>
-
-
-                            </div>
-
+                               </div>
+                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -106,8 +118,14 @@
                                 <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
                                     <img src="./img/products/wroom32.png" class="img-fluid mt-4  p-2 h-10  " alt="Producto 1">
                                 </div>
+
+
+
                                 <div class="col-md-8 g-3">
-                                    <div class="card-body">
+                          
+                                   
+                                     <!-- Tarjeta -->
+                                     <div class="card-body">
                                         <h5 class="card-title">ESP32 WROOM32</h5>
                                         <p class="card-text">Esta placa de desarrollo tiene WiFi y Bluetooth 4.2 gracias al procesador doble núcleo Tensilica Xtensa LX6.
                                                 
@@ -119,6 +137,10 @@
                                         <p class="text-primary fw-bold">$100</p>
                                     </div>
                                 </div>
+
+
+
+
                             </div>
                         </div>
                         <div class="card mb-4">
@@ -127,16 +149,25 @@
                                     <img src="./img/products/esp32-s2.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
                                 </div>
                                 <div class="col-md-8 g-3">
-                                    <div class="card-body ">
-                                        <h5 class="card-title">ESP32 S2</h5>
-                                        <p class="card-text">Esta placa cuenta con el novedoso ESP32-S2, procesador potente  Tensilica Xtensa LX7.
-                                            <span class="d-none d-md-block">
-                                                Ademas ofrece WiFi, Bluetooth y BLE.
-                                                Ethernet, SPI de alta velocidad, UART y I2S e I2C. Como novedad cuenta con USB nativo.
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
+                                    <h5 class="card-title">ESP32 S2</h5>
+
+                                    <div id="collapsibleCard" class="collapse show">
+                                        <div class="card-body ">
+                                            
+                                            <p class="card-text">Esta placa cuenta con el novedoso ESP32-S2, procesador potente  Tensilica Xtensa LX7.
+                                                <span class="d-none d-md-block">
+                                                    Ademas ofrece WiFi, Bluetooth y BLE.
+                                                    Ethernet, SPI de alta velocidad, UART y I2S e I2C. Como novedad cuenta con USB nativo.
+                                                </span>
+                                            </p>
+                                           
+                                        </div>
+                                       
+                                    
                                     </div>
+                                    <p class="text-primary fw-bold">$100</p>
+                                    
+                               
                                 </div>
                             </div>
                         </div>
