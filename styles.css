@@ -78,7 +78,9 @@ nav{
     }
 
 
-
+.card{
+    padding-left: 2%;
+}
 
 .main-content{
     position:sticky;
@@ -95,15 +97,16 @@ nav{
     opacity: 1;
     transition: all 0.3s ease;
     object-fit: cover;
-    padding: 5%;
+  
 }
 
 .img-fluid:hover{
-
+    
     opacity: 1;
     transform: scale(1.15);
     margin:  1%;
 }
+
 
 
 
