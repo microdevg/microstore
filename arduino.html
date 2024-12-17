@@ -38,7 +38,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./esp32.html">ESP32</a></li>
-                                <li><a class="dropdown-item" href="#">STM32</a></li>
+                                <li><a class="dropdown-item" href="./stm32.html">STM32</a></li>
                                 <li>
                                     <hr class="dropdown-divider">Microchip
                                 </li>
@@ -73,38 +73,61 @@
 
         <div class="row  g-3  mt-2  ">
             <!-- Columna izquierda: Filtros -->
-            <div class="   col-md-12 col-lg-3 sticky-top  sticky-lg-top">
-                <div class="p-3  mt-5 border bg-light  filter ">
+            <div class="col-md-12 col-lg-3 sticky-top sticky-lg-top">
+                <div class="p-3 pt-lg-5 mt-5 border bg-light filter">
                     <form>
-                      
-
-                        <div class="row">
-                            <!-- Botón para colapsar/expandir -->
-                            <button class="btn btn-primary m-0 p-0  button-filter" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleCard" aria-expanded="false" aria-controls="collapsibleCard">
+                        <!-- Botón para colapsar/expandir los filtros -->
+                        <button class="btn btn-primary m-0 p-0 button-filter w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleFilters" aria-expanded="false" aria-controls="collapsibleFilters">
                             Filtros
-                            </button>
-                           
-                             <!-- Tarjeta -->
-                             <div class="card">
-                              
-                               <div id="collapsibleCard" class="collapse show">
-                                <div class="row  mt-0 ">
+                        </button>
+            
+                        <!-- Tarjeta de Filtros -->
+                        <div class="card mt-3">
+                            <div id="collapsibleFilters" class="collapse show">
+                                <div class="row mt-0">
                                     <!-- Filtro por Precio -->
-                                    <div class="col-5 col-sm-5 col-md-5 col-lg-12 ">
-                                        <label for="precio" class="d-none form-label">Rango de Precio</label>
-                                        <input type="range" class="form-range pt-4" id="precio" min="0" max="500">
+                                    <div class="col-12 mb-3">
+                                        <label for="precio" class="form-label fw-bold">Rango de Precio</label>
+                                        <input type="range" class="form-range" id="precio" min="0" max="500">
                                         <div class="d-flex justify-content-between">
                                             <span>$0</span>
                                             <span>$500</span>
                                         </div>
                                     </div>
-                                    <div class="pt-2 col-7  col-sm-7 col-md-7 col-lg-12  ">
-                                        <!-- Botón de Aplicar Filtros -->
-                                        <button type="submit" class=" btn btn-primary w-100   ">Precio</button>
+            
+                                    <!-- Checkboxes -->
+                                    <div class="col-12 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="cuotasSinInteres">
+                                            <label class="form-check-label" for="cuotasSinInteres">
+                                                Cuotas sin interés
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="envioGratis">
+                                            <label class="form-check-label" for="envioGratis">
+                                                Envío gratis
+                                            </label>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Menú desplegable de Categorías -->
+                                    <div class="col-12 mb-3">
+                                        <label for="categorias" class="form-label fw-bold">Categorías</label>
+                                        <select class="form-select" id="categorias">
+                                            <option value="" selected>Seleccionar</option>
+                                            <option value="8">Arquitectura de 8 bits</option>
+                                            <option value="32">Arquitectura de 32 bits</option>
+                                            <option value="64">Arquitectura de 64 bits</option>
+                                        </select>
+                                    </div>
+            
+                                    <!-- Botón de Aplicar Filtros -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100">Aplicar Filtros</button>
                                     </div>
                                 </div>
-                               </div>
-                             </div>
+                            </div>
                         </div>
                     </form>
                 </div>

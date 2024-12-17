@@ -14,10 +14,12 @@ body{
     background-color:#46aaf5;
     min-width: 320px;    
     background: linear-gradient(to bottom, #46aaf5, #ffffff);
+    min-height: 1200px;
 
     padding-top: 20px;
 
 }
+
 
 
 nav{
