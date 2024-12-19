@@ -1,151 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <title>MicroStore</title>
 </head>
+
 <body>
 
-<div class="container">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0 " >
-        <div class="container-fluid">
-            
-            <a class="navbar-brand" href="./index.html">
-                <img src="./img/micro-store.png" height="60px" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <div class="container">
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./img/micro-store.png" height="60px" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Menús desplegables -->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./arduino.html">Arduino</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Placas de desarrollo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./esp32.html">ESP32</a></li>
+                                <li><a class="dropdown-item" href="./stm32.html">STM32</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cursos</a>
+                        </li>
+                    </ul>
+
+                    <!-- Carrito de compras -->
+                    <div id="shoppingCartContainer" class="d-flex align-items-left ">
+                        <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
+                        <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
+                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                            pagar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+        <script>
+            // Simulación del estado del carrito
+            const cart = {
+                totalAmount: 0, // Cambia este valor para probar
+                totalItems: 1,
+            };
+
+            function updateShoppingCart() {
+                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
+                const totalAmountElement = document.getElementById('totalAmount');
+                const totalItemsElement = document.getElementById('totalItems');
+
+                if (cart.totalItems > 0) {
+                    console.log("Items es mayor que 0");
+                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
+                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
+                }
+                else {
+                    console.log("no se muestra");
+                    shoppingCartContainer.classList.add('d-none');
+
+                }
+
+
+
+            }
+
+
+            function goToCheckout() {
+                // Lógica para redirigir al proceso de pago
+                window.location.href = "./shopcase.html";
+            }
+
+            // Actualizar el carrito al cargar la página
+            document.addEventListener('DOMContentLoaded', updateShoppingCart);
+        </script>
+
+
+
+      
+
+  
+
+<div class="container mt-2  ">
+
+
+        <!-- Row con 4 columnas para tarjetas -->
+        <div class="row mb-4 g-3 mt-1 h-20">
+            <div class="col-md-3 ">
+                <div class="card ">
+                    <img src="./img/products/arduino.jpg" class=" img-fluid  mt-4 p-2 p-md-4 p-lg-4 h-20 "
+                        alt="Arduino">
+                    <div class="card-body justify-content-center align-items-center">
+                        <h5 class="card-title text-center">
+                            <a href="./arduino.html" class="text-decoration-none text-dark">Arduino </a>
+                        </h5>
+                        <p class="card-text mb-4 "> Proyectos geniales al alcance de todos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card ">
+                    <img src="./img/products/esp32.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 " alt="ESP32">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center">
+                            <a href="./esp32.html" class="text-decoration-none text-dark">ESP32</a>
+                        </h5>
+                        <p class="card-text mb-4 ">La placa de desarrollo que revoluciono los proyectos IoT.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card ">
+                    <img src="./img/products/raspberry_pico.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 "
+                        alt="Raspberry Pico">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center">
+                            <a href="index.html" class="text-decoration-none text-dark">Raspberry </a>
+                        </h5>
+                        <p class="card-text mb-4 ">El RP2040, el primer microcontrolador desarrollado por Rapsberry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card ">
+                    <img src="./img/products/modulo-com.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 "
+                        alt="Module">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center">
+                            <a href="./index.html" class="text-decoration-none text-dark">Módulo de Comunicación </a>
+                        </h5>
+                        <p class="card-text mb-4 pb-4">Lleva tus aplicaciones del IoT al siguiente nivel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrusel -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./img/courses/curso_arduino.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Curso Arduino para principiantes</h5>
+                        <p class="d-none d-md-block">Arduino es la plataforma de desarrollo de prototipos mas usada del
+                            planeta. Aprende a aprovechar todo su potencial</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./img/courses/curso_esp32.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h5>Curso introduccion a aplicaciones con el Esp32</h5>
+                        <p class="d-none d-md-block">Realiza aplicaciones con conectividad WiFi y Bluetoorh .</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/courses/micropython.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption   d-md-block">
+                        <h5>Curso de micropython</h5>
+                        <p class="d-none d-md-block">Curso de introduccion a micropython. Repasamos Python y luego
+                            aplicamos los conocimientos a plataformas como ESP32 y Raspberry PI pico.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Menús desplegables -->
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./arduino.html">Arduino</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Placas de desarrollo
-                   </a>
-                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li><a class="dropdown-item" href="./esp32.html">ESP32</a></li>
-                     <li><a class="dropdown-item" href="./stm32.html">STM32</a></li>
-                    
-                   </ul>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
-                  </li>
-          
-                </ul>
-                     
-                    <!-- Puedes añadir más aquí -->
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary " type="submit">Buscar</button>
-                </form>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-    </nav>
 
-    <!-- Row con 4 columnas para tarjetas -->
-    <div class="row mb-4 g-3 mt-1 h-20">
-        <div class="col-md-3 ">
-            <div class="card ">
-                <img src="./img/products/arduino.jpg" class=" img-fluid  mt-4 p-2 p-md-4 p-lg-4 h-20 " alt="Arduino">
-                <div class="card-body justify-content-center align-items-center">
-                    <h5 class="card-title text-center">
-                        <a href="./arduino.html" class="text-decoration-none text-dark">Arduino </a>
-                    </h5>
-                    <p class="card-text mb-4 "> Proyectos geniales al alcance de todos.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card ">
-                <img src="./img/products/esp32.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 " alt="ESP32">
-                <div class="card-body ">
-                    <h5 class="card-title text-center">
-                        <a href="./esp32.html" class="text-decoration-none text-dark">ESP32</a>
-                    </h5>
-                    <p class="card-text mb-4 ">La placa de desarrollo que revoluciono los proyectos IoT.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card ">
-                <img src="./img/products/raspberry_pico.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 " alt="Raspberry Pico">
-                <div class="card-body ">
-                    <h5 class="card-title text-center">
-                        <a href="index.html" class="text-decoration-none text-dark">Raspberry </a>
-                    </h5>
-                    <p class="card-text mb-4 ">El RP2040, el primer microcontrolador  desarrollado por Rapsberry.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card ">
-                <img src="./img/products/modulo-com.jpg" class=" img-fluid mt-4 p-2 p-md-4 p-lg-4 h-20 " alt="Module">
-                <div class="card-body ">
-                    <h5 class="card-title text-center">
-                        <a href="./index.html" class="text-decoration-none text-dark">Módulo de Comunicación </a>
-                    </h5>
-                    <p class="card-text mb-4 pb-4">Lleva tus aplicaciones del IoT al siguiente nivel</p>
-                </div>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="bg-light text-center py-3">
+            <p>© 2024 Micro Store. Todos los derechos reservados.</p>
+        </footer>
     </div>
 
-    <!-- Carrusel -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="./img/courses/curso_arduino.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <h5 >Curso Arduino para principiantes</h5>
-                    <p class="d-none d-md-block">Arduino es la plataforma de desarrollo de prototipos mas usada del planeta. Aprende a aprovechar todo su potencial</p>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="./img/courses/curso_esp32.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <h5 >Curso introduccion a aplicaciones con el Esp32</h5>
-                    <p class="d-none d-md-block">Realiza aplicaciones con conectividad WiFi y Bluetoorh .</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./img/courses/micropython.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption   d-md-block">
-                    <h5 >Curso de micropython</h5>
-                    <p class="d-none d-md-block">Curso de introduccion a micropython. Repasamos Python y luego aplicamos los conocimientos a plataformas como ESP32 y Raspberry PI pico.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3">
-        <p>© 2024 Micro Store. Todos los derechos reservados.</p>
-    </footer>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

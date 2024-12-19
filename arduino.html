@@ -12,13 +12,13 @@
 
 <body>
 
-    <div class="container  fixed-top fixed-sm-top fixed-md-top  ">
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0  ">
+    <div class="container">
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <img src="./img/micro-store.png" height="60px" alt="">
-
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -39,32 +39,63 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./esp32.html">ESP32</a></li>
                                 <li><a class="dropdown-item" href="./stm32.html">STM32</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">Microchip
-                                </li>
-                                <li><a class="dropdown-item" href="#">Linux embebido</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cursos</a>
                         </li>
-                
                     </ul>
 
-                    <!-- Puedes añadir más aquí -->
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary " type="submit">Search</button>
-                    </form>
+                    <!-- Carrito de compras -->
+                    <div id="shoppingCartContainer" class="d-flex align-items-left ">
+                        <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
+                        <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
+                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                            pagar</button>
+                    </div>
                 </div>
             </div>
         </nav>
 
     </div>
-      
 
-  
+        <script>
+            // Simulación del estado del carrito
+            const cart = {
+                totalAmount: 0, // Cambia este valor para probar
+                totalItems: 1,
+            };
+
+            function updateShoppingCart() {
+                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
+                const totalAmountElement = document.getElementById('totalAmount');
+                const totalItemsElement = document.getElementById('totalItems');
+
+                if (cart.totalItems > 0) {
+                    console.log("Items es mayor que 0");
+                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
+                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
+                }
+                else {
+                    console.log("no se muestra");
+                    shoppingCartContainer.classList.add('d-none');
+
+                }
+
+
+
+            }
+
+
+            function goToCheckout() {
+                // Lógica para redirigir al proceso de pago
+                window.location.href = "./shopcase.html";
+            }
+
+            // Actualizar el carrito al cargar la página
+            document.addEventListener('DOMContentLoaded', updateShoppingCart);
+        </script>
+
 
     <div class="container mt-2  ">
         

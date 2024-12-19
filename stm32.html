@@ -12,9 +12,10 @@
 
 <body>
 
-    <div class="container  fixed-top fixed-sm-top fixed-md-top  mb-5">
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0  ">
+    <div class="container">
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
                     <img src="./img/micro-store.png" height="60px" alt="">
@@ -36,30 +37,64 @@
                                 Placas de desarrollo
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./esp32.html"</a></li>
+                                <li><a class="dropdown-item" href="./esp32.html">ESP32</a></li>
                                 <li><a class="dropdown-item" href="./stm32.html">STM32</a></li>
-                               
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Cursos</a>
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Cursos</a>
                         </li>
-                
                     </ul>
 
-                    <!-- Puedes añadir más aquí -->
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary " type="submit">Search</button>
-                    </form>
+                    <!-- Carrito de compras -->
+                    <div id="shoppingCartContainer" class="d-flex align-items-left ">
+                        <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
+                        <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
+                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                            pagar</button>
+                    </div>
                 </div>
             </div>
         </nav>
 
     </div>
-      
 
+        <script>
+            // Simulación del estado del carrito
+            const cart = {
+                totalAmount: 0, // Cambia este valor para probar
+                totalItems: 1,
+            };
+
+            function updateShoppingCart() {
+                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
+                const totalAmountElement = document.getElementById('totalAmount');
+                const totalItemsElement = document.getElementById('totalItems');
+
+                if (cart.totalItems > 0) {
+                    console.log("Items es mayor que 0");
+                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
+                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
+                }
+                else {
+                    console.log("no se muestra");
+                    shoppingCartContainer.classList.add('d-none');
+
+                }
+
+
+
+            }
+
+
+            function goToCheckout() {
+                // Lógica para redirigir al proceso de pago
+                window.location.href = "./shopcase.html";
+            }
+
+            // Actualizar el carrito al cargar la página
+            document.addEventListener('DOMContentLoaded', updateShoppingCart);
+        </script>
   
 
     <div class="container mt-2  ">
@@ -188,6 +223,65 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card mb-4">
+                            <div class="row g-0">
+                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
+                                    <img src="./img/products/stm32f0.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
+                                </div>
+                                <div class="col-md-8 g-3">
+                                    <h5 class="card-title">Placa Stm32f030f4p6</h5>
+
+                                    <div id="collapsibleCard" class="collapse show">
+                                        <div class="card-body ">
+                                            
+                                            <p class="card-text text-start">Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.
+                                                <span class="d-none d-md-block text-start">
+                                                    Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
+                                                    ADC, frecuencia de PWM.
+                                                </span>
+                                            </p>
+                                           
+                                        </div>
+                                       
+                                    
+                                    </div>
+                                    <p class="text-primary fw-bold">$100</p>
+                                    
+                               
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="row g-0">
+                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
+                                    <img src="./img/products/stm32f0.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
+                                </div>
+                                <div class="col-md-8 g-3">
+                                    <h5 class="card-title">Placa Stm32f030f4p6</h5>
+
+                                    <div id="collapsibleCard" class="collapse show">
+                                        <div class="card-body ">
+                                            
+                                            <p class="card-text text-start">Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.
+                                                <span class="d-none d-md-block text-start">
+                                                    Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
+                                                    ADC, frecuencia de PWM.
+                                                </span>
+                                            </p>
+                                           
+                                        </div>
+                                       
+                                    
+                                    </div>
+                                    <p class="text-primary fw-bold">$100</p>
+                                    
+                               
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card mb-4">
                             <div class="row g-0">
                                 <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
