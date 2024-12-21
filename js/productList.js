@@ -174,22 +174,22 @@ function goToCheckout(button,productId) {
 let path = window.location.pathname;
 
 
-const ARDUINO_PATH = '/arduino.html'
-const ESP32_PATH = '/esp32.html'
-const STM32_PATH = '/stm32.html'
+const ARDUINO_PATH = 'arduino'
+const ESP32_PATH = 'esp32'
+const STM32_PATH = 'stm32'
 console.log(path);
 
-if(path == ARDUINO_PATH || path ==`${GITHUB_PAGE_PATH}${ARDUINO_PATH}`){
+if(path.includes(ARDUINO_PATH)){
     console.log("Dibujando los productos arduino\n");
     showBox(ArduinoProducts,'cards-content')
 } 
 
-if(path == ESP32_PATH || path ==`${GITHUB_PAGE_PATH}${ESP32_PATH}`){
+if(path.includes(ESP32_PATH)){
     console.log("Dibujando los productos arduino\n");
     showBox(ESP32Products,'cards-content')
 } 
 
-if(path == STM32_PATH || path ==`${GITHUB_PAGE_PATH}${STM32_PATH}`){
+if(path.includes(STM32_PATH)){
     console.log("Dibujando los productos arduino\n");
     showBox(ST32Products,'cards-content')
 } 
