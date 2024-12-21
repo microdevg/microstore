@@ -17,7 +17,7 @@ const ESP32Products = products.filter(product =>product.category === 'ESP32');
 
 
 
-
+const GITHUB_PAGE_PATH = '/microstore'
 const STORAGE_KEY = "carrito";
 
 const loadCart = () => {
@@ -171,21 +171,25 @@ function goToCheckout(button,productId) {
     
     }
 
+let path = window.location.pathname;
 
 
-console.log(window.location.pathname);
+const ARDUINO_PATH = '/arduino.html'
+const ESP32_PATH = '/esp32.html'
+const STM32_PATH = '/stm32.html'
+console.log(path);
 
-if(window.location.pathname == '/arduino.html'){
+if(path == ARDUINO_PATH || path ==`${GITHUB_PAGE_PATH}${ARDUINO_PATH}`){
     console.log("Dibujando los productos arduino\n");
     showBox(ArduinoProducts,'cards-content')
 } 
 
-if(window.location.pathname == '/esp32.html'){
+if(path == ESP32_PATH || path ==`${GITHUB_PAGE_PATH}${ESP32_PATH}`){
     console.log("Dibujando los productos arduino\n");
     showBox(ESP32Products,'cards-content')
 } 
 
-if(window.location.pathname == '/stm32.html'){
+if(path == STM32_PATH || path ==`${GITHUB_PAGE_PATH}${STM32_PATH}`){
     console.log("Dibujando los productos arduino\n");
     showBox(ST32Products,'cards-content')
 } 
