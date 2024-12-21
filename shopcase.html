@@ -59,42 +59,7 @@
 
     </div>
 
-        <script>
-            // Simulación del estado del carrito
-            const cart = {
-                totalAmount: 0, // Cambia este valor para probar
-                totalItems: 1,
-            };
-
-            function updateShoppingCart() {
-                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
-                const totalAmountElement = document.getElementById('totalAmount');
-                const totalItemsElement = document.getElementById('totalItems');
-
-                if (cart.totalItems > 0) {
-                    console.log("Items es mayor que 0");
-                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
-                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
-                }
-                else {
-                    console.log("no se muestra");
-                    shoppingCartContainer.classList.add('d-none');
-
-                }
-
-
-
-            }
-
-
-            function goToCheckout() {
-                // Lógica para redirigir al proceso de pago
-                window.location.href = "./shopcase.html";
-            }
-
-            // Actualizar el carrito al cargar la página
-            document.addEventListener('DOMContentLoaded', updateShoppingCart);
-        </script>
+ 
 
       
 
@@ -118,30 +83,68 @@
     </div>
         
 
+    <div id="cart-no-empty" class="card mb-4 d-none">
+
+        <div class="col-12 col-md-12 ">
+            <div class="row d-flex justify-content-center align-items-center">
+               
+                <h3 class="col-12 m-2 d-flex justify-content-center align-items-center"> Informacion de contacto</h3>
+                <div class="col-10 col-md-6 col-lg-6 ">
+                    
+                    <form id="formulario" action="https://formspree.io/f/xrbbzpbl" method="POST">
+                        <input type="hidden" id="carritoData" name="carrito" style="display:none;" value="">
+                        <textarea id="totalCarrito" name="total" style="display:none;"></textarea>
+                        <br>
+                        
+                        <input class = "col-12 p-0 mb-2"type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre y apellido" required>
+                        <input class = "col-12 p-0 mb-2"type="email" id="contactoEmail" name="email" placeholder="Ingresa tu correo" required>
+                        <input class = "col-12 p-0 mb-2"type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" id="botonEnviar" class=" btn btn-primary me-md-2">Confirmar </button>
+                         <button class="btn btn-secondary">Volver</button>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="card mb-4">
         <div class="row g-0">
+            <div id="detalle">
+                
+            </div>
+
+        </div>
+        <div class="row g-0">
             
+          
+
             <div class="col-12 col-md-5 ">
                 <div class="card-body">
                     <h5 class="empty-cart d-none">No hay elementos en su carro de compras</h5>
                     <div id="cart-no-empty" class="d-none">
+                        
                     <h5 class="card-title cart-not-empty ">Total de su compra</h5>
-                    <p class="card-text">Enviar factura a germanvelardez@gmail.com </p>
-
+                    <p class="card-text">Enviar factura al correo </p>
                     </div>
-                    
-                    
                 </div>
             </div>
-            <div class="col-12 col-md-5 g-2  ">
-                <h3 class="justify-content-center align-items-center">
-                    <span id="total-price"class=" badge rounded-pill bg-info text-dark pb-2 pt-2 mb-2 mt-4  w-100" ></span>
-                </h3>
-                
 
-            </div>
-        </div>
+            <div class=" d-grid gap-1 d-md-flex justify-content-md-end p-4 ">
+                <h3 class="   d-flex justify-content-center align-items-center m-2 text-dark">
+                    Total
+                </h3>
+                <h3 class="">
+                    <span id="total-price"class=" badge rounded-pill bg-info text-dark  mt-2 w-100" ></span>
+                </h3>            
+            </div> 
+
+            
     </div>
+
+
 
 
         <!-- Footer -->
