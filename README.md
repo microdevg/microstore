@@ -16,7 +16,7 @@ La página web es una propuesta para un e-commerce llamado **Microstore**, dise�
 
 ## 🔗 Demo  
 Accede al sitio en el siguiente enlace:  
-[Microstore - Proyecto Final](https://microdevg.github.io/microstore/)  
+[Microstore - Proyecto Final](https://microsstore.netlify.app/)  
 
 ---
 ¡Gracias por visitar este proyecto! 😊  
