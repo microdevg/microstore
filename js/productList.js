@@ -168,7 +168,6 @@ function goToCheckout(button,productId) {
      
         const total = elements.reduce((sum, product) => sum + product.price, 0);
         console.log(total)
-        // totalPrice.innerHTML = `$${total}`
     
     }
 

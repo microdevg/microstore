@@ -1,6 +1,6 @@
 console.log("Js datos")
 
-let products = await fetch('./../products/db.json')
+let products = await fetch('./js/db.json')
     .then(response => {
         if (!response.ok) throw new Error('Error al cargar el archivo JSON');
         return response.json();
