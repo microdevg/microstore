@@ -1,0 +1,131 @@
+[
+    {
+        "id": 0,
+        "name": "ESP32 WROOM32",
+        "category": "ESP32",
+        "short_description": "Esta placa de desarrollo tiene WiFi y Bluetooth 4.2 gracias al procesador doble núcleo Tensilica Xtensa LX6.",
+        "more_description": "Ademas ofrece WiFi, Bluetooth y BLE. Ethernet, SPI de alta velocidad, UART y I2S e I2C.",
+        "price": 100,
+        "img": "./../img/products/wroom32.png"
+    },
+    {
+        "id": 1,
+        "name": "ESP32 S2",
+        "category": "ESP32",
+        "short_description": "Esta placa cuenta con el novedoso ESP32-S2, procesador potente Tensilica Xtensa LX7.",
+        "more_description": "Ademas ofrece WiFi, Bluetooth y BLE. Ethernet, SPI de alta velocidad, UART y I2S e I2C. Como novedad cuenta con USB nativo.",
+        "price": 100,
+        "img": "./../img/products/esp32-s2.png"
+    },
+    {
+        "id": 2,
+        "name": "ESP32 TYGO 4G",
+        "category": "ESP32",
+        "short_description": "Placa basada en ESP32, cuenta con conexion celular 4G.",
+        "more_description": "Tiene 20 pines digitales de entrada/salida (de las cuales 6 se puede utilizar como salidas PWM)",
+        "price": 100,
+        "img": "./../img/products/ESP32-TYGO.jpg"
+    },
+    {
+        "id": 3,
+        "name": "ESP32 S3",
+        "category": "ESP32",
+        "short_description": "Esta placa cuenta con el novedoso ESP32-S2, procesador potente de doble núcleo Tensilica Xtensa LX7.",
+        "more_description": "ESP32-S3 cuenta cuenta con un procesador de doble nucleo",
+        "price": 100,
+        "img": "./../img/products/esp32-s3.png"
+    },
+    {
+        "id": 4,
+        "name": "ESP32-P4 con display",
+        "category": "ESP32",
+        "short_description": "Portenta H7 te permite construir tu próximo proyecto inteligente.",
+        "more_description": "¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente? Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud.",
+        "price": 100,
+        "img": "./../img/products/esp-p4-display.png"
+    },
+
+    {
+        "id": 6,
+        "name": "Arduino UNO R3",
+        "category": "ARDUINO",
+        "short_description": "El Arduino Uno es una placa basada en el ATmega328.",
+        "more_description": "Tiene 20 pines digitales de entrada/salida, de los cuales 6 se pueden utilizar como salidas PWM.",
+        "price": 60,
+        "img": "./../img/products/arduino.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Arduino MEGA R3",
+        "category": "ARDUINO",
+        "short_description": "El Arduino Mega es una placa diseñada para proyectos grandes.",
+        "more_description": "Ofrece más pines digitales y analógicos que el Arduino Uno, ideal para aplicaciones avanzadas.",
+        "price": 100,
+        "img":"./../img/products/arduino_mega.png"
+    },
+    {
+        "id": 8,
+        "name": "Arduino DUE",
+        "category": "ARDUINO",
+        "short_description": "Arduino Due es una placa de alto rendimiento.",
+        "more_description": "Basada en el microcontrolador ARM Cortex-M3, ideal para proyectos complejos.",
+        "price": 150,
+        "img":"./../img/products/Arduino-Due-Board.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Arduino Nano v3",
+        "category": "ARDUINO",
+        "short_description": "Arduino Nano es una placa compacta con el ATmega328.",
+        "more_description": "Perfecta para prototipos compactos, ofreciendo la misma funcionalidad que el Uno.",
+        "price": 65,
+        "img":"./../img/products/arduino_nano.png"
+    },
+    {
+        "id": 10,
+        "name": "Arduino Portenta H7",
+        "category": "ARDUINO",
+        "short_description": "Portenta H7 permite construir proyectos inteligentes avanzados.",
+        "more_description": "Compatible con Arduino IoT Cloud, ideal para casas automatizadas o jardines inteligentes.",
+        "price": 250,
+        "img": "./../img/products/arduino_portenta.jpg"
+
+    },
+    {
+        "id": 11,
+        "name": "Bluepill (STM32F103C8T6)",
+        "category": "ST32",
+        "short_description": "Ésta increíble y potente tarjeta está basada en un ARM-Cortex M3. Es programable desde IDE de Arduino.",
+        "more_description": "Ofrece una potencia, memoria flash, RAM, pines de entrada y salida, ADC, frecuencia de PWM.",
+        "price": 100,
+        "img": "./../img/products/stm32-blue-pill.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Placa Stm32f030f4p6",
+        "category": "ST32",
+        "short_description": "Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.",
+        "more_description": "Ofrece una potencia, memoria flash, RAM, pines de entrada y salida, ADC, frecuencia de PWM.",
+        "price": 50,
+        "img": "./../img/products/stm32f0.png"
+    },
+    {
+        "id": 13,
+        "name": "Placa Stm32f030f4p6",
+        "category": "ST32",
+        "short_description": "Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.",
+        "more_description": "Ofrece una potencia, memoria flash, RAM, pines de entrada y salida, ADC, frecuencia de PWM.",
+        "price": 65,
+        "img": "./../img/products/stm32f0.png"
+    },
+
+    {
+        "id": 15,
+        "name": "STM32F407VG Discovery",
+        "category": "ST32",
+        "short_description": "Placa basada en ESP32, cuenta con conexión celular 4G.",
+        "more_description": "Tiene 20 pines digitales de entrada/salida (de las cuales 6 se pueden utilizar como salidas PWM).",
+        "price": 250,
+        "img": "./../img/products/stm32f407.jpg"
+    }
+]

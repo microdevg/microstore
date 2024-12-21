@@ -59,42 +59,7 @@
 
     </div>
 
-        <script>
-            // Simulación del estado del carrito
-            const cart = {
-                totalAmount: 0, // Cambia este valor para probar
-                totalItems: 1,
-            };
-
-            function updateShoppingCart() {
-                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
-                const totalAmountElement = document.getElementById('totalAmount');
-                const totalItemsElement = document.getElementById('totalItems');
-
-                if (cart.totalItems > 0) {
-                    console.log("Items es mayor que 0");
-                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
-                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
-                }
-                else {
-                    console.log("no se muestra");
-                    shoppingCartContainer.classList.add('d-none');
-
-                }
-
-
-
-            }
-
-
-            function goToCheckout() {
-                // Lógica para redirigir al proceso de pago
-                window.location.href = "./shopcase.html";
-            }
-
-            // Actualizar el carrito al cargar la página
-            document.addEventListener('DOMContentLoaded', updateShoppingCart);
-        </script>
+        
 
 
 
@@ -208,6 +173,11 @@
             <p>© 2024 Micro Store. Todos los derechos reservados.</p>
         </footer>
     </div>
+
+
+    <script  type="Module" src="./js/products.js"></script>
+    <script type="module" src="./js/productList.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

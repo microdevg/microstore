@@ -49,7 +49,7 @@
                     <div id="shoppingCartContainer" class="d-flex align-items-left ">
                         <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
                         <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
-                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                        <button id="goCart" class="btn btn-primary  mt-2 mb-2 p-1 w-50" >Ir a
                             pagar</button>
                     </div>
                 </div>
@@ -57,43 +57,6 @@
         </nav>
 
     </div>
-
-        <script>
-            // Simulación del estado del carrito
-            const cart = {
-                totalAmount: 0, // Cambia este valor para probar
-                totalItems: 1,
-            };
-
-            function updateShoppingCart() {
-                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
-                const totalAmountElement = document.getElementById('totalAmount');
-                const totalItemsElement = document.getElementById('totalItems');
-
-                if (cart.totalItems > 0) {
-                    console.log("Items es mayor que 0");
-                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
-                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
-                }
-                else {
-                    console.log("no se muestra");
-                    shoppingCartContainer.classList.add('d-none');
-
-                }
-
-
-
-            }
-
-
-            function goToCheckout() {
-                // Lógica para redirigir al proceso de pago
-                window.location.href = "./shopcase.html";
-            }
-
-            // Actualizar el carrito al cargar la página
-            document.addEventListener('DOMContentLoaded', updateShoppingCart);
-        </script>
 
       
 
@@ -165,219 +128,14 @@
             </div>
 
             <div class="  col-md-12 col-lg-9 ">
-                
                 <div class=" mt-2 mt-lg-5 ">
-                    <div class=" row g-0 main-content">
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/wroom32.png" class="img-fluid mt-4  p-2 h-10  " alt="Producto 1">
-                                </div>
-
-
-
-                                <div class="col-md-8 g-3">
-                          
-                                   
-                                     <!-- Tarjeta -->
-                                     <div class="card-body">
-                                        <h5 class="card-title">ESP32 WROOM32</h5>
-                                        <p class="card-text">Esta placa de desarrollo tiene WiFi y Bluetooth 4.2 gracias al procesador doble núcleo Tensilica Xtensa LX6.
-                                                
-                                            <span class="d-none d-md-block">
-                                                Ademas ofrece WiFi, Bluetooth y BLE.
-                                                Ethernet, SPI de alta velocidad, UART y I2S e I2C.
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/esp32-s2.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <h5 class="card-title">ESP32 S2</h5>
-
-                                    <div id="collapsibleCard" class="collapse show">
-                                        <div class="card-body ">
-                                            
-                                            <p class="card-text">Esta placa cuenta con el novedoso ESP32-S2, procesador potente  Tensilica Xtensa LX7.
-                                                <span class="d-none d-md-block">
-                                                    Ademas ofrece WiFi, Bluetooth y BLE.
-                                                    Ethernet, SPI de alta velocidad, UART y I2S e I2C. Como novedad cuenta con USB nativo.
-                                                </span>
-                                            </p>
-                                           
-                                        </div>
-                                       
-                                    
-                                    </div>
-                                    <p class="text-primary fw-bold">$100</p>
-                                    
-                               
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/ESP32-TYGO.jpg" class="img-fluid mt-4 p-2 h-10  "
-                                        alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">ESP32 TYGO 4G </h5>
-                                        <p class="card-text">Placa basada en ESP32, cuenta con conexion celular 4G.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/esp32-s3.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">ESP32 S3</h5>
-                                        <p class="card-text">Esta placa cuenta con el novedoso ESP32-S2, procesador potente de doble núcleo Tensilica Xtensa LX7.
-                                            <span class="d-none d-md-block">
-                                                ESP32-S3 cuenta cuenta con un procesador de doble nucleo 
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/esp-p4-display.png" class="img-fluid mt-4 p-2 h-10" alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">ESP32-P4 con display</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-    
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 p-2 h-10" alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 p-2 h-10" alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 p-2 h-10" alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4  p-2 h-10" alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-    
+                    <div id="cards-content" class=" row g-0 main-content ">
                     </div>
                 </div>
-                 
-
-      
-              
-
-
-
             </div>
         </div>
+
+        <script type="Module" src="./js/productList.js"></script>
 
 
         <!-- Footer -->

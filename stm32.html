@@ -50,7 +50,7 @@
                     <div id="shoppingCartContainer" class="d-flex align-items-left ">
                         <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
                         <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
-                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                        <button id="goCart" class="btn btn-primary  mt-2 mb-2 p-1 w-50" >Ir a
                             pagar</button>
                     </div>
                 </div>
@@ -59,43 +59,6 @@
 
     </div>
 
-        <script>
-            // Simulación del estado del carrito
-            const cart = {
-                totalAmount: 0, // Cambia este valor para probar
-                totalItems: 1,
-            };
-
-            function updateShoppingCart() {
-                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
-                const totalAmountElement = document.getElementById('totalAmount');
-                const totalItemsElement = document.getElementById('totalItems');
-
-                if (cart.totalItems > 0) {
-                    console.log("Items es mayor que 0");
-                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
-                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
-                }
-                else {
-                    console.log("no se muestra");
-                    shoppingCartContainer.classList.add('d-none');
-
-                }
-
-
-
-            }
-
-
-            function goToCheckout() {
-                // Lógica para redirigir al proceso de pago
-                window.location.href = "./shopcase.html";
-            }
-
-            // Actualizar el carrito al cargar la página
-            document.addEventListener('DOMContentLoaded', updateShoppingCart);
-        </script>
-  
 
     <div class="container mt-2  ">
         
@@ -165,157 +128,14 @@
             </div>
 
             <div class="  col-md-12 col-lg-9 ">
-                
                 <div class=" mt-2 mt-lg-5 ">
-                    <div class=" row g-0 main-content">
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/stm32-blue-pill.jpg" class="img-fluid mt-4  p-2 h-10  " alt="Producto 1">
-                                </div>
-
-                                <div class="col-md-8 g-3">
-                                     <!-- Tarjeta -->
-                                     <div class="card-body">
-                                        <h5 class="card-title">Bluepill (STM32F103C8T6)</h5>
-                                        <p class="card-text text-start">
-                                            Ésta increíble y potente tarjeta esta basada en un ARM-Cortex M3. Es programable desde IDE de Arduino.
-                                                
-                                            <span class="d-none d-md-block text-start">
-                                                Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
-                                                ADC, frecuencia de PWM.
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/stm32f0.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <h5 class="card-title">Placa Stm32f030f4p6</h5>
-
-                                    <div id="collapsibleCard" class="collapse show">
-                                        <div class="card-body ">
-                                            
-                                            <p class="card-text text-start">Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.
-                                                <span class="d-none d-md-block text-start">
-                                                    Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
-                                                    ADC, frecuencia de PWM.
-                                                </span>
-                                            </p>
-                                           
-                                        </div>
-                                       
-                                    
-                                    </div>
-                                    <p class="text-primary fw-bold">$100</p>
-                                    
-                               
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/stm32f0.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <h5 class="card-title">Placa Stm32f030f4p6</h5>
-
-                                    <div id="collapsibleCard" class="collapse show">
-                                        <div class="card-body ">
-                                            
-                                            <p class="card-text text-start">Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.
-                                                <span class="d-none d-md-block text-start">
-                                                    Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
-                                                    ADC, frecuencia de PWM.
-                                                </span>
-                                            </p>
-                                           
-                                        </div>
-                                       
-                                    
-                                    </div>
-                                    <p class="text-primary fw-bold">$100</p>
-                                    
-                               
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/stm32f0.png" class="img-fluid mt-4 p-2 h-10  " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <h5 class="card-title">Placa Stm32f030f4p6</h5>
-
-                                    <div id="collapsibleCard" class="collapse show">
-                                        <div class="card-body ">
-                                            
-                                            <p class="card-text text-start">Esta placa cuenta con un ARM-Cortex M0 de bajo consumo, concretamente un Stm32f030f4p6.
-                                                <span class="d-none d-md-block text-start">
-                                                    Ofrece una potencia, memoria flash, RAM, pines de entrada y salida,
-                                                    ADC, frecuencia de PWM.
-                                                </span>
-                                            </p>
-                                           
-                                        </div>
-                                       
-                                    
-                                    </div>
-                                    <p class="text-primary fw-bold">$100</p>
-                                    
-                               
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/stm32f407.jpg" class="img-fluid mt-4 p-2 h-10  "
-                                        alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">STM32F407VG Discovery </h5>
-                                        <p class="card-text">Placa basada en ESP32, cuenta con conexion celular 4G.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-
+                    <div id="cards-content" class=" row g-0 main-content ">
                     </div>
                 </div>
-                 
-
-      
-              
-
-
-
             </div>
         </div>
 
+        <script type="Module" src="./js/productList.js"></script>
 
         <!-- Footer -->
         <footer class="bg-light text-center py-3">

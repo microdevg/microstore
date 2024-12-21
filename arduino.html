@@ -13,7 +13,7 @@
 <body>
 
     <div class="container">
-        
+
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-0 pb-0">
             <div class="container-fluid">
@@ -50,7 +50,7 @@
                     <div id="shoppingCartContainer" class="d-flex align-items-left ">
                         <span id="totalAmount" class="me-2 fw-bold pe-5 "></span>
                         <span id="totalItems" class="me-2 fw-bold pe-5 "> </span>
-                        <button id="pagar" class="btn btn-primary  mt-2 mb-2 p-1 w-50" onclick="goToCheckout()">Ir a
+                        <button id="goCart" class="btn btn-primary  mt-2 mb-2 p-1 w-50">Ir a
                             pagar</button>
                     </div>
                 </div>
@@ -59,306 +59,87 @@
 
     </div>
 
-        <script>
-            // Simulación del estado del carrito
-            const cart = {
-                totalAmount: 0, // Cambia este valor para probar
-                totalItems: 1,
-            };
-
-            function updateShoppingCart() {
-                const shoppingCartContainer = document.getElementById('shoppingCartContainer');
-                const totalAmountElement = document.getElementById('totalAmount');
-                const totalItemsElement = document.getElementById('totalItems');
-
-                if (cart.totalItems > 0) {
-                    console.log("Items es mayor que 0");
-                    totalAmountElement.textContent = `Total: $${cart.totalAmount}`;
-                    totalItemsElement.textContent = `Items: ${cart.totalItems}`;
-                }
-                else {
-                    console.log("no se muestra");
-                    shoppingCartContainer.classList.add('d-none');
-
-                }
-
-
-
-            }
-
-
-            function goToCheckout() {
-                // Lógica para redirigir al proceso de pago
-                window.location.href = "./shopcase.html";
-            }
-
-            // Actualizar el carrito al cargar la página
-            document.addEventListener('DOMContentLoaded', updateShoppingCart);
-        </script>
 
 
     <div class="container mt-2  ">
-        
-     
 
 
         <div class="row  g-3  mt-2  ">
-     <!-- Columna izquierda: Filtros -->
-     <div class="col-md-12 col-lg-3 sticky-top sticky-lg-top">
-        <div class="p-3 pt-lg-5 mt-5 border bg-light filter">
-            <form>
-                <!-- Botón para colapsar/expandir los filtros -->
-                <button class="btn btn-primary m-0 p-0 button-filter w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleFilters" aria-expanded="false" aria-controls="collapsibleFilters">
-                    Filtros
-                </button>
-    
-                <!-- Tarjeta de Filtros -->
-                <div class="card mt-3">
-                    <div id="collapsibleFilters" class="collapse show">
-                        <div class="row mt-0">
-                            <!-- Filtro por Precio -->
-                            <div class="col-12 mb-3">
-                                <label for="precio" class="form-label fw-bold">Rango de Precio</label>
-                                <input type="range" class="form-range" id="precio" min="0" max="500">
-                                <div class="d-flex justify-content-between">
-                                    <span>$0</span>
-                                    <span>$500</span>
+            <!-- Columna izquierda: Filtros -->
+            <div class="col-md-12 col-lg-3 sticky-top sticky-lg-top">
+                <div class="p-3 pt-lg-5 mt-5 border bg-light filter">
+                    <form>
+                        <!-- Botón para colapsar/expandir los filtros -->
+                        <button class="btn btn-primary m-0 p-0 button-filter w-100" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapsibleFilters" aria-expanded="false"
+                            aria-controls="collapsibleFilters">
+                            Filtros
+                        </button>
+
+                        <!-- Tarjeta de Filtros -->
+                        <div class="card mt-3">
+                            <div id="collapsibleFilters" class="collapse show">
+                                <div class="row mt-0">
+                                    <!-- Filtro por Precio -->
+                                    <div class="col-12 mb-3">
+                                        <label for="precio" class="form-label fw-bold">Rango de Precio</label>
+                                        <input type="range" class="form-range" id="precio" min="0" max="500">
+                                        <div class="d-flex justify-content-between">
+                                            <span>$0</span>
+                                            <span>$500</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Checkboxes -->
+                                    <div class="col-12 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="cuotasSinInteres">
+                                            <label class="form-check-label" for="cuotasSinInteres">
+                                                Cuotas sin interés
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="envioGratis">
+                                            <label class="form-check-label" for="envioGratis">
+                                                Envío gratis
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Menú desplegable de Categorías -->
+                                    <div class="col-12 mb-3">
+                                        <label for="categorias" class="form-label fw-bold">Categorías</label>
+                                        <select class="form-select" id="categorias">
+                                            <option value="" selected>Seleccionar</option>
+                                            <option value="8">Arquitectura de 8 bits</option>
+                                            <option value="32">Arquitectura de 32 bits</option>
+                                            <option value="64">Arquitectura de 64 bits</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Botón de Aplicar Filtros -->
+                                    <div class="col-12">
+                                        <button type="submit"
+                                            class="btn btn-primary m-0 p-0 button-filter w-100">Aplicar</button>
+                                    </div>
                                 </div>
-                            </div>
-    
-                            <!-- Checkboxes -->
-                            <div class="col-12 mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="cuotasSinInteres">
-                                    <label class="form-check-label" for="cuotasSinInteres">
-                                        Cuotas sin interés
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="envioGratis">
-                                    <label class="form-check-label" for="envioGratis">
-                                        Envío gratis
-                                    </label>
-                                </div>
-                            </div>
-    
-                            <!-- Menú desplegable de Categorías -->
-                            <div class="col-12 mb-3">
-                                <label for="categorias" class="form-label fw-bold">Categorías</label>
-                                <select class="form-select" id="categorias">
-                                    <option value="" selected>Seleccionar</option>
-                                    <option value="8">Arquitectura de 8 bits</option>
-                                    <option value="32">Arquitectura de 32 bits</option>
-                                    <option value="64">Arquitectura de 64 bits</option>
-                                </select>
-                            </div>
-    
-                            <!-- Botón de Aplicar Filtros -->
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary m-0 p-0 button-filter w-100">Aplicar</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </div>
+            </div>
             <div class="  col-md-12 col-lg-9 ">
                 <div class=" mt-2 mt-lg-5 ">
-                    <div class=" row g-0 main-content">
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino.jpg" class="img-fluid mt-4 h-10 m " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino UNO R3</h5>
-                                        <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_mega.png" class="img-fluid mt-4 h-10 ml-2 " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino MEGA R3</h5>
-                                        <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/Arduino-Due-Board.jpg" class="img-fluid mt-4 h-10 ml-2 "
-                                        alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino DUE</h5>
-                                        <p class="card-text">El Arduino Uno es una placa basada en el ATmega328.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_nano.png" class="img-fluid mt-4 h-10 ml-2 " alt="Producto 1">
-                                </div>
-                                <div class="col-md-8 g-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Nano v3</h5>
-                                        <p class="card-text">El Arduino Nano es una placa basada en el ATmega328 de tamaño
-                                            compacto.
-                                            <span class="d-none d-md-block">
-                                                Tiene 20 pines digitales de entrada/salida
-                                                (de las cuales 6 se puede utilizar como salidas PWM)
-                                            </span>
-                                        </p>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 h-10"ml-2 alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-    
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 h-10"ml-2 alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 h-10"ml-2 alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 h-10"ml-2 alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="row g-0">
-                                <div class="col-md-4 h-10 d-flex justify-content-center align-items-center">
-                                    <img src="./img/products/arduino_portenta.jpg" class="img-fluid mt-4 h-10"ml-2 alt="Producto 1">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino Portenta H7</h5>
-                                        <p class="card-text">Portenta H7 te permite construir tu próximo proyecto
-                                            inteligente.
-                                            <span class="d-none d-md-block">
-                                                ¿Alguna vez quisiste una casa automatizada? ¿O un jardín inteligente?
-                                                Bueno, ahora es fácil con las placas compatibles con Arduino IoT Cloud..
-                                            </span>
-                                        <p class="text-primary fw-bold">$100</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-    
+                    <div id="cards-content" class=" row g-0 main-content ">
                     </div>
                 </div>
-                 
-
-      
-              
-
-
-
             </div>
         </div>
 
+        <script  type="Module" src="./js/products.js"></script>
+
+        <script type="Module" src="./js/productList.js"></script>
+        <script type="Module" src="./js/carrito.js"></script>
 
         <!-- Footer -->
         <footer class="bg-light text-center py-3">
